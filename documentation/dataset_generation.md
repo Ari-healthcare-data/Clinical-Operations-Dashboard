@@ -85,7 +85,7 @@ Formula/Method: `=IF(RAND()>0.25,"Full-Time","Part-Time")`
 Purpose: Simulates provider capacity.
 
 Column: department_id
-Formula/Method: XLOOKUP from specialty
+Formula/Method: `XLOOKUP` from specialty
 Purpose: Enables normalized relational structure.
 
 Column: annual_capacity
@@ -97,7 +97,7 @@ Note: Additional columns define availability patterns, age eligibility, appointm
 ## DEPARTMENTS Table
 
 Column: department_id
-Formula/Method: =ROW()-1
+Formula/Method: `=ROW()-1`
 Purpose: Numeric ID for relational joins.
 
 Column: department_name
@@ -105,13 +105,13 @@ Formula/Method: Manual (Primary Care, Cardiology, Orthopedics, Dermatology, Neur
 Purpose: Department names corresponding to each ID.
 
 Column: default_reimbursement
-Formula/Method: XLOOKUP from Financial_Assumptions
+Formula/Method: `XLOOKUP` from Financial_Assumptions
 Purpose: Supports revenue modeling and KPI calculations.
 
 ## APPOINTMENTS Table
 
 Column: appointment_id
-Formula/Method: =ROW()-1
+Formula/Method: `=ROW()-1`
 Purpose: Primary key for each appointment encounter.
 
 Column: patient_id
@@ -127,11 +127,11 @@ Formula/Method: Random within 2023–2024
 Purpose: Models realistic visit dates; follow-ups scheduled days/weeks after prior visits.
 
 Column: appointment_type
-Formula/Method: First visit = "New Patient", else mostly "Follow-up"
+Formula/Method: First visit `= "New Patient", else mostly "Follow-up"`
 Purpose: Differentiates visit types.
 
 Column: appointment_outcome
-Formula/Method: =LET(r,RAND(),IF(r<0.12,"No-Show",IF(r<0.17,"Cancelled","Completed")))
+Formula/Method: `=LET(r,RAND(),IF(r<0.12,"No-Show",IF(r<0.17,"Cancelled","Completed")))`
 Purpose: Simulates real-world outcomes.
 
 Column: visit_reason
@@ -139,11 +139,11 @@ Formula/Method: Based on appointment type
 Purpose: Assigns plausible clinical reasons.
 
 Column: department_name
-Formula/Method: XLOOKUP from provider
+Formula/Method: `XLOOKUP` from provider
 Purpose: Maintains provider-department consistency.
 
 Column: patient_age
-Formula/Method: XLOOKUP from Patients
+Formula/Method: `XLOOKUP` from Patients
 Purpose: Supports age-based reporting and specialty eligibility.
 
 Column: appointment_month / year_month
