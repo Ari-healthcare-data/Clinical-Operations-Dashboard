@@ -1,0 +1,6 @@
+﻿department_id,department_name,default_reimbursement
+1,Primary Care,150
+2,Cardiology,350
+3,Orthopedics,400
+4,Dermatology,180
+5,Neurology,320

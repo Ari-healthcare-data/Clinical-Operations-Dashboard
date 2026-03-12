@@ -1,0 +1,21 @@
+﻿provider_id,provider_first_name,provider_last_name,provider_name,specialty,clinic_location,fte_status,department_id,active_months,min_patient_age_for_specialty,max_patient_age_for_specialty,fte_value,clinic_days_per_week,appointment_slots_per_week,annual_capacity
+1,Quinn,Harper,"""Harper, Quinn""",Primary Care,Ypsilanti,Full-Time,1,"""1,2,3,4,5,6,7,8,9,10,11,12""",0,100,1.0,5,100,5200
+2,Riley,Lawson,"""Lawson, Riley""",Primary Care,Livonia,Full-Time,1,"""1,2,3,4,5,6,7,8,9,10,11,12""",0,100,1.0,5,100,5200
+3,Rowan,Fletcher,"""Fletcher, Rowan""",Primary Care,Ypsilanti,Part-Time,1,"""1,2,4,5,6,8,10,12""",0,100,0.5,3,50,2600
+4,Sawyer,Bishop,"""Bishop, Sawyer""",Primary Care,Canton,Full-Time,1,"""1,2,3,4,5,6,7,8,9,10,11,12""",0,100,1.0,5,100,5200
+5,Skyler,Montgomery,"""Montgomery, Skyler""",Primary Care,Ypsilanti,Full-Time,1,"""1,2,3,4,5,6,7,8,9,10,11,12""",0,100,1.0,5,100,5200
+6,Taylor,Franklin,"""Franklin, Taylor""",Primary Care,Livonia,Full-Time,1,"""1,2,3,4,5,6,7,8,9,10,11,12""",0,100,1.0,5,100,5200
+7,Alex,Turner,"""Turner, Alex""",Primary Care,Ann Arbor,Part-Time,1,"""2,6,8,9,10,11,12""",0,100,0.5,3,50,2600
+8,Avery,Dawson,"""Dawson, Avery""",Primary Care,Canton,Full-Time,1,"""1,2,3,4,5,6,7,8,9,10,11,12""",0,100,1.0,4,100,5200
+9,Blair,Collins,"""Collins, Blair""",Cardiology,Ann Arbor,Full-Time,2,"""1,2,3,4,5,6,7,8,9,10,11,12""",0,100,1.0,4,80,4160
+10,Casey,Ramirez,"""Ramirez, Casey""",Cardiology,Ann Arbor,Part-Time,2,"""1,3,5,6,7,8,9,10,11,12""",0,100,0.7,4,56,2912
+11,Dakota,Bennett,"""Bennett, Dakota""",Cardiology,Ann Arbor,Full-Time,2,"""1,2,3,4,5,6,7,8,9,10,11,12""",0,100,1.0,4,80,4160
+12,Jamie,Sullivan,"""Sullivan, Jamie""",Orthopedics,Livonia,Full-Time,3,"""1,2,3,4,5,6,7,8,9,10,11,12""",0,100,1.0,5,90,4680
+13,Jordan,Hayes,"""Hayes, Jordan""",Orthopedics,Dearborn,Full-Time,3,"""1,2,3,4,5,6,7,8,9,10,11,12""",0,100,1.0,4,90,4680
+14,Kendall,Pierce,"""Pierce, Kendall""",Orthopedics,Dearborn,Full-Time,3,"""1,2,3,4,5,6,7,8,9,10,11,12""",0,100,1.0,4,90,4680
+15,Morgan,Wallace,"""Wallace, Morgan""",Dermatology,Livonia,Full-Time,4,"""1,2,3,4,5,6,7,8,9,10,11,12""",0,100,1.0,4,120,6240
+16,Parker,Brooks,"""Brooks, Parker""",Dermatology,Dearborn,Full-Time,4,"""1,2,3,4,5,6,7,8,9,10,11,12""",0,100,1.0,4,120,6240
+17,Arden,Blake,"""Blake, Arden""",Dermatology,Canton,Part-Time,4,"""1,2,3,4,5,6,7,9,10,11,12""",0,100,0.5,3,60,3120
+18,Jules,Carter,"""Carter, Jules""",Dermatology,Ypsilanti,Part-Time,4,"""1,2,3,4,5,6,7,8,9,10,11,12""",0,100,0.7,4,84,4368
+19,Remy,Delgado,"""Delgado, Remy""",Neurology,Livonia,Part-Time,5,"""4,7,8,10,11""",0,100,0.8,4,56,2912
+20,Sloane,Whitaker,"""Whitaker, Sloane""",Neurology,Dearborn,Full-Time,5,"""1,2,3,4,5,6,7,8,9,10,11,12""",0,100,1.0,5,70,3640
