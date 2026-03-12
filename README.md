@@ -85,7 +85,7 @@ See [portfolio_notes.md](documentation/portfolio_notes.md) for insights, busines
 
 ## Dataset Generation
 
-The dataset_generation.md file provides a detailed description of how the synthetic datasets were created for this project. It includes:
+The `dataset_generation.md` file provides a detailed description of how the synthetic datasets were created for this project. It includes:
 
 - Formulas and methods for generating each table: **Patients, Providers, Departments, Appointments, Referrals, Financial_Assumptions, Calendar**
 
@@ -94,6 +94,7 @@ The dataset_generation.md file provides a detailed description of how the synthe
 - Guidance for reproducing or extending the dataset for further analytics
 
 For more details, see [Dataset Generation](documentation/dataset_generation.md).
+
 
 
 
