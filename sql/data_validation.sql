@@ -129,7 +129,6 @@ FROM calendar;
 SELECT COUNT(*) FILTER (WHERE specialty IS NULL) AS null_specialty
 FROM financial_assumptions; --no assumption_id because "specialty" is the PK
 
-
 -- Expected Results:
 -- 0 rows
 
@@ -224,6 +223,7 @@ SELECT COUNT(*) AS total_departments FROM appointments_kpi_department;
 -- Expected Results:
 -- total_departments:  5
 
+
 SELECT COUNT(*) AS total_providers FROM appointments_kpi_provider;
 
 -- Expected Results:
@@ -282,6 +282,7 @@ HAVING COUNT(*) > 1;
 
 -- Expected Results:
 -- 0 rows
+
 
 -- Check duplicates in cleaned appointments
 SELECT patient_id, provider_id, appointment_date, COUNT(*) AS cnt
