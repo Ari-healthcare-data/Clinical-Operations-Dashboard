@@ -56,7 +56,7 @@ I also added fallback logic in some places to prevent broken relationships when 
 
 The following example shows how the Appointments table is structured:
 
-![Appointments Table](images/table_samples/appointments_table.png)
+![Appointments Table](../images/table_samples/appointments_table.png)
 
 ---
 
@@ -116,4 +116,4 @@ Instead of just visualizing random data, this setup allows me to:
 
 All data in this project is synthetic and created for learning purposes only. No real PHI, patient data or provider data is used. 
 
-For a more detailed breakdown of the column-level logic, formulas, and design decisions used to generate this dataset, see the [Dataset Formulas Reference](dataset_formulas_reference.md).
+For a more detailed breakdown of the column-level logic, formulas, and design decisions used to generate this dataset, see the <br> [Dataset Formulas Reference](dataset_formulas_reference.md).
