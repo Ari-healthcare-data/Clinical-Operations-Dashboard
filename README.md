@@ -10,6 +10,18 @@ This dataset is fully synthetic and created for learning purposes only. It does 
 
 ---
 
+## Project Status
+
+As of Day 2, the synthetic EMR-style dataset has been fully designed and generated.
+
+Before moving into SQL and analysis, I completed an initial data quality review to make sure the dataset actually holds up in a realistic setting. This included checking table relationships, data consistency, and overall usability.
+
+A small number of real-world data issues were identified (e.g., missing values, inconsistent formats, and a duplicate record). These will be addressed during the SQL cleaning and transformation phase.
+
+The dataset is now in a strong position for exploratory analysis, modeling, and dashboard development.
+
+---
+
 ## Why I Built This
 
 I’m transitioning into a healthcare data/analyst role, and I wanted a project that reflects real-world workflows instead of just isolated datasets.
@@ -91,6 +103,17 @@ The appointments table serves as the central fact table, capturing patient encou
 The referrals table connects completed appointments to specialty care providers, enabling analysis of referral flow and care transitions.
 
 ---
+
+## Data Quality Note
+
+This dataset intentionally includes a few common real-world data challenges, such as:
+- Missing values (e.g., patient contact preferences)
+- Inconsistent formatting (e.g., provider availability fields)
+- Duplicate records (e.g., holiday entries)
+
+These were not treated as mistakes, but as part of the design. In real healthcare data environments, datasets are rarely perfect, and handling these issues is a key part of the analysis process.
+
+They will be cleaned and standardized in later phases using SQL.
 
 ---
 
