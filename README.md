@@ -12,13 +12,18 @@ This dataset is fully synthetic and created for learning purposes only. It does 
 
 ## Project Status
 
-As of Day 2, the synthetic EMR-style dataset has been fully designed and generated.
+On Day 3, I transitioned the dataset from Excel-based generation to a relational database using PostgreSQL (via pgAdmin 4).
 
-Before moving into SQL and analysis, I completed an initial data quality review to make sure the dataset actually holds up in a realistic setting. This included checking table relationships, data consistency, and overall usability.
+- Exported Excel sheets into UTF-8 encoded CSV files.
+- Standardized columns and formats to ensure SQL compatibility.
+- Loaded CSVs into PostgreSQL tables according to the schema.
+- Defined primary and foreign key relationships to enforce relational integrity.
+- Verified row counts and validated database integrity.
 
-A small number of real-world data issues were identified (e.g., missing values, inconsistent formats, and a duplicate record). These will be addressed during the SQL cleaning and transformation phase.
+All tables are now fully populated and interconnected through foreign key constraints.
 
-The dataset is now in a strong position for exploratory analysis, modeling, and dashboard development.
+Next:
+- SQL analytics queries, KPI tables, dashboard datasets
 
 ---
 
@@ -142,8 +147,6 @@ Clinical-Operations-Dashboard/
 
 ## Next Steps
 
-- Export all tables into CSV files
-- Load data into PostgreSQL
 - Create cleaned tables and KPI views
 - Build Power BI dashboard (multi-page)
 - Summarize insights and recommendations
