@@ -143,7 +143,7 @@ Rather than treating this as a visualization project, I am approaching it as a f
 ---
 ---
 
-## Day 2: Data Validation & Initial Review
+## Day 2 - Data Validation & Initial Review
 
 Before starting analysis, I performed an initial validation step to understand the condition of the dataset and make sure it was ready for downstream work.
 
@@ -163,7 +163,7 @@ The next phase focuses on cleaning, standardizing, and preparing the data for an
 ---
 ---
 
-## Day 3: CSV Preparation & Database Upload
+## Day 3 - CSV Preparation & Database Upload
 
 After validating the dataset structure on Day 2, I prepared each table for ingestion into PostgreSQL:
 
@@ -193,4 +193,72 @@ After validating the dataset structure on Day 2, I prepared each table for inges
 ### Outcome
 
 All datasets were successfully transformed into CSV format and imported into PostgreSQL. The database now fully mirrors the synthetic EMR dataset with proper relational integrity, ready for analytics and KPI development.
+
+---
+---
+
+## Day 4 - Data Cleaning Method
+
+- Standardized raw tables into cleaned views (`*_clean`)
+- Handled missing values using `COALESCE`
+- Converted Yes/No fields into boolean flags
+- Applied spot checks to validate correctness
+
+## Analytical Layer Development
+
+After establishing cleaned datasets, I created analytical views to support reporting and dashboarding.
+
+### Approach
+
+- Used SQL views to build reusable, dashboard-ready datasets
+- Applied aggregation functions such as COUNT, SUM, and COUNT DISTINCT
+- Used CASE statements to derive categorical metrics
+- Leveraged CTEs (Common Table Expressions) to structure complex queries
+- Ensured metrics were calculated at the appropriate level of granularity
+
+
+### Key Analytical Views Created
+
+- Patient risk segmentation (`patient_risk_categories`)
+- Provider workload summaries (`provider_workload_summary`)
+- Referral SLA performance tracking (`referral_sla_summary`)
+- Appointment lead time calculations (`appointment_lead_time`)
+- Department-level performance summaries (`department_summary`)
+
+---
+
+## Handling Data Integrity in Aggregations
+
+### Avoiding Double Counting in Aggregations
+
+While building department-level summaries, initial joins between providers, appointments, and patients caused inflated metrics due to row multiplication.
+
+**Resolution:**
+- Aggregated appointments and providers separately using CTEs
+- Joined summarized datasets at the department level
+- Ensured accurate counts for:
+  - Total appointments
+  - Completed, canceled, and no-show appointments
+  - Unique patients and providers
+
+**Impact:** Metrics now match realistic operational data (e.g., Primary Care total appointments ≈ 1,650 instead of an inflated 31,350)
+
+---
+
+## Validation Approach
+
+- Performed spot checks using `LIMIT 10` queries for each view
+- Verified relationships between totals, breakdowns, and unique counts
+- Ensured no negative or impossible values appear
+- Checked that KPI distributions (e.g., no-show rate, lead time) align with expected clinical patterns
+
+---
+
+## Outcome
+
+The analytical layer transforms raw transactional data into structured, dashboard-ready datasets suitable for business intelligence tools.
+
+> Note: Initial department-level totals were far too high (31,350 vs ~3,000 appointments).  
+> After investigating, I realized joins between providers, patients, and appointments were multiplying rows.  
+> Using CTEs and pre-aggregation fixed this issue. This reinforced the importance of query grain and join logic in SQL.
 
