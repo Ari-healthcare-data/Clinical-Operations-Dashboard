@@ -33,7 +33,7 @@ Appointments were treated as the central fact table, since most operational metr
 
 ## Step 2: Data Cleaning (Planned in SQL)
 
-The next step is to load the dataset into PostgreSQL and create cleaned versions of the core tables.
+The next step I will do is to load the dataset into PostgreSQL and create cleaned versions of the core tables to ensure that metrics reflect true operational patterns and that dashboards don’t propagate errors.
 
 Planned cleaning steps include:
 
@@ -49,8 +49,7 @@ The goal is to ensure that downstream analysis is based on reliable and consiste
 
 ## Step 3: Data Transformation & Feature Engineering
 
-After cleaning, I will create derived fields and views to support analysis.
-
+After cleaning, I will create derived fields and views to support analysis and to capture operational nuances that aren’t explicit in raw data but are critical for decision-making.
 Examples include:
 
 - No-show flag and no-show rate calculations
@@ -65,7 +64,7 @@ These transformations will be implemented using SQL to create reusable analytica
 
 ## Step 4: KPI Development
 
-Instead of calculating metrics directly in Power BI, I plan to create KPI tables in SQL.
+Instead of calculating metrics directly in Power BI, I plan to create KPI tables in SQL. I plan to do this to centralize logic, ensure consistency, and make dashboards easier to maintain.
 
 Examples of KPI tables:
 
@@ -169,12 +168,14 @@ After validating the dataset structure on Day 2, I prepared each table for inges
 
 ### Steps Performed
 
-- Exported each Excel sheet as a UTF-8 encoded CSV file.
-- Standardized column names to match the SQL schema.
-- Converted Excel serial numbers to proper dates (YYYY-MM-DD).
-- Preserved blank cells for SQL NULL values.
-- Ensured proper quoting/escaping to prevent import errors.
-- Verified that relational integrity (foreign key relationships) would be maintained after import.
+Before importing the data into PostgreSQL, I prepared each table carefully to prevent errors and maintain relational integrity. 
+
+- Exported each Excel sheet as a UTF-8 encoded CSV file to ensure consistent encoding during database import.  
+- Standardized column names to match the SQL schema, which makes querying and joining tables more straightforward.  
+- Converted Excel serial numbers to proper dates (YYYY-MM-DD) so all date calculations would be accurate.  
+- Preserved blank cells for SQL NULL values to reflect missing data without introducing incorrect defaults.  
+- Ensured proper quoting/escaping to prevent import errors and maintain data fidelity.  
+- Verified that relational integrity (foreign key relationships) would be maintained after import, ensuring that the database accurately mirrors the logical relationships in the dataset.
 
 ### Database Import
 
@@ -199,10 +200,12 @@ All datasets were successfully transformed into CSV format and imported into Pos
 
 ## Day 4 - Data Cleaning Method
 
-- Standardized raw tables into cleaned views (`*_clean`)
-- Handled missing values using `COALESCE`
-- Converted Yes/No fields into boolean flags
-- Applied spot checks to validate correctness
+These cleaning steps create a reliable foundation for building accurate analytical views.
+
+- Standardized raw tables into cleaned views (`*_clean`) to ensure consistent structure across all tables.
+- Handled missing values using `COALESCE` to prevent nulls from affecting calculations.
+- Converted Yes/No fields into boolean flags to simplify categorical logic for dashboards.
+- Applied spot checks to validate that transformations produce correct results.
 
 ## Analytical Layer Development
 
@@ -234,14 +237,16 @@ After establishing cleaned datasets, I created analytical views to support repor
 While building department-level summaries, initial joins between providers, appointments, and patients caused inflated metrics due to row multiplication.
 
 **Resolution:**
-- Aggregated appointments and providers separately using CTEs
-- Joined summarized datasets at the department level
+- Aggregated appointments and providers separately using CTEs to prevent double-counting when joining tables.
+- Joined summarized datasets at the department level to combine data safely for department-level insights.
 - Ensured accurate counts for:
   - Total appointments
   - Completed, canceled, and no-show appointments
   - Unique patients and providers
 
 **Impact:** Metrics now match realistic operational data (e.g., Primary Care total appointments ≈ 1,650 instead of an inflated 31,350)
+
+Early aggregation issues taught me the importance of query grain and careful join logic to avoid inflated metrics.
 
 ---
 
@@ -265,7 +270,7 @@ The analytical layer transforms raw transactional data into structured, dashboar
 ---
 ---
 
-## Day 5- Visulizing the Data in Power BI 
+## Day 5- Visualizing the Data in Power BI 
 
 ### KPI Definitions
 
@@ -290,7 +295,7 @@ There were some challenges I encountered today:
 - Aligning KPI calculations between SQL and Power BI  
 - Maintaining consistency across multiple dashboard pages
 
-## Solution Methids I Used
+## Solution Methods I Used
 
 - Used DISTINCTCOUNT for patient-level metrics  
 - Implemented CASE statements for clean outcome classification  
