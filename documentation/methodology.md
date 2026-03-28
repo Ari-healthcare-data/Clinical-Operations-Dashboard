@@ -141,6 +141,7 @@ Rather than treating this as a visualization project, I am approaching it as a f
 
 ---
 ---
+---
 
 ## Day 2 - Data Validation & Initial Review
 
@@ -159,6 +160,7 @@ The findings from this phase directly inform the next step: SQL-based data clean
 
 The next phase focuses on cleaning, standardizing, and preparing the data for analysis using SQL.
 
+---
 ---
 ---
 
@@ -195,6 +197,7 @@ Before importing the data into PostgreSQL, I prepared each table carefully to pr
 
 All datasets were successfully transformed into CSV format and imported into PostgreSQL. The database now fully mirrors the synthetic EMR dataset with proper relational integrity, ready for analytics and KPI development.
 
+---
 ---
 ---
 
@@ -269,6 +272,7 @@ The analytical layer transforms raw transactional data into structured, dashboar
 
 ---
 ---
+---
 
 ## Day 5- Visualizing the Data in Power BI 
 
@@ -300,6 +304,3 @@ There were some challenges I encountered today:
 - Used DISTINCTCOUNT for patient-level metrics  
 - Implemented CASE statements for clean outcome classification  
 - Validated totals across all views before visualization
-
----
----
