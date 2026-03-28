@@ -1,5 +1,17 @@
 # Clinical Operations Dashboard
 
+## Table of Contents
+
+- [Overview](https://github.com/Ari-healthcare-data/Clinical-Operations-Dashboard?tab=readme-ov-file#overview)
+  - [Clinical Operations Dashboard](https://github.com/Ari-healthcare-data/Clinical-Operations-Dashboard?tab=readme-ov-file#clinical-operations-dashboard-1)
+  - [Dashboard Preview](https://github.com/Ari-healthcare-data/Clinical-Operations-Dashboard?tab=readme-ov-file#dashboard-preview)
+  - [Why I Built This](https://github.com/Ari-healthcare-data/Clinical-Operations-Dashboard?tab=readme-ov-file#why-i-built-this)
+  - [Dataset Overview](https://github.com/Ari-healthcare-data/Clinical-Operations-Dashboard?tab=readme-ov-file#dataset-overview)
+- [Dataset Generation](https://github.com/Ari-healthcare-data/Clinical-Operations-Dashboard/blob/main/documentation/dataset_generation.md#dataset-generation)
+- [Dataset Formulas Reference](https://github.com/Ari-healthcare-data/Clinical-Operations-Dashboard/blob/main/documentation/dataset_formulas_reference.md#dataset-formulas-reference)
+- [Methodology](https://github.com/Ari-healthcare-data/Clinical-Operations-Dashboard/blob/main/documentation/methodology.md#methodology)
+- [Portfolio Notes](https://github.com/Ari-healthcare-data/Clinical-Operations-Dashboard/blob/main/documentation/portfolio_notes.md#portfolio-notes)
+
 ## Overview
 
 This project is a healthcare analytics case study I built using a synthetic EMR-style dataset to simulate how clinical operations teams use data to identify gaps in patient access, provider utilization, and referral workflows, and turn those insights into actionable decisions.
@@ -45,9 +57,9 @@ The report contains five pages:
 
 - Primary Care drives most activity (~55% of appointments), which makes sense since it’s the first point of contact for most patients.
 - No-show rate (~12%) is noticeable, which is a reminder that patient attendance can affect clinic efficiency.  
-- Referral SLA breach rate (~57.93%) shows bottlenecks in specialty access.  
+- Referral SLA breach rate (~58%) shows bottlenecks in specialty access.  
 - Cardiology and Dermatology have higher SLA delays and revenue leakage than other departments.  
-- Same-day appointments represent a significant portion (~42%) of total scheduling, possibly reflecting urgent care or open-access scheduling models.
+- Same-day appointments represent a significant portion of total scheduling, possibly reflecting urgent care or open-access scheduling models.
 
 ## Challenges & Lessons Learned
 
