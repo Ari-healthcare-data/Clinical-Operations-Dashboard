@@ -249,3 +249,40 @@ In this phase, I focused on building analytical views on top of the cleaned data
 
 The project is now ready for visualization. The next phase will focus on building an interactive dashboard using Power BI or Tableau, leveraging these analytical views.
 
+---
+---
+---
+
+# Day 5 – Visualization
+
+## Dashboard Design Decisions
+
+- Dashboard structured into five pages reflecting operational and analytical questions  
+- KPI cards used for high-level summary, charts used for distribution and comparison  
+- Maintained consistent layout and color scheme for usability and readability
+
+## Metric Selection Rationale
+
+- Provider-level metrics for operational decision-making  
+- Department-level metrics to identify bottlenecks  
+- Referral & SLA metrics to evaluate access efficiency and revenue impact  
+- Patient risk segmentation to understand population health
+
+## Issues Encountered
+
+- Initial duplication in patient counts due to joins  
+- Inconsistent aggregation between SQL and Power BI  
+- Misalignment of calculated fields and raw table values
+
+## How Issues Were Resolved
+- Replaced COUNT with DISTINCTCOUNT for patient-level metrics  
+- Standardized KPI definitions across SQL views and Power BI  
+- Validated totals across multiple layers (SQL → Power BI → manual checks)
+
+## Reflections
+
+- Validating data before visualization is critical  
+- Consistent KPI definitions across tools build trust in dashboards  
+- Structuring analytics projects as end-to-end pipelines improves clarity  
+- Designing dashboards for a clear target audience enhances usability and impact 
+
