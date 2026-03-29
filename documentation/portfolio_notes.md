@@ -283,6 +283,44 @@ The project is now ready for visualization. The next phase will focus on buildin
 
 - Validating data before visualization is critical  
 - Consistent KPI definitions across tools build trust in dashboards  
-- Structuring analytics projects as end-to-end pipelines improves clarity  
-- Designing dashboards for a clear target audience enhances usability and impact 
+- Structuring analytics projects as end-to-end pipelines improves clarity
+- Designing dashboards for a clear target audience enhances usability and impact
 
+---
+---
+---
+
+# Day 6 – Reporting & Finalization
+
+Today is my last day working on this project.
+
+## What I Worked On
+
+- Created a formal Clinical Operations Dashboard Report (PDF)
+- Translated dashboard insights into a structured narrative
+- Focused on communicating findings clearly for a non-technical audience
+
+---
+
+## Challenges / Observations
+
+- Writing a report felt very different from building dashboards because it required explaining *why* the metrics matter, not just showing them
+- Avoiding “slide narration” was challenging. I had to shift from describing visuals to telling a clear story
+- Balancing technical accuracy with readability was important — especially for non-technical stakeholders
+- Structuring the report (Executive Summary → Insights/Findings → Actionable Recommendations) helped improve clarity and flow
+
+---
+
+## What I Learned
+
+- A dashboard alone is not enough because stakeholders need clear explanations and actionable recommendations
+- Communication is just as important as technical skills in data analytics
+- Turning data into a narrative is key in improving how insights are received
+
+---
+
+## Final Reflection
+
+This project helped me understand the full lifecycle of a data analytics workflow, from data generation and cleaning to dashboard development and the final reporting.
+
+The reporting phase, in particular, reinforced the importance of translating data into clear, actionable insights that stakeholders can understand and use.
